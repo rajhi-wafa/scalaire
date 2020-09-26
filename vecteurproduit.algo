@@ -1,0 +1,56 @@
+FUNCTION fundot_product(v1:FLOAT,v2:FLOAT) : FLOAT
+VAR
+    i:INTEGER;
+    p:FLOAT;
+BEGIN
+    FOR i FROM 0 TO 2 STEP 1  DO
+        write("donner lélémenet"i+1 "de vecteur v1")
+    reade(v1[i]);
+    write("donner lélémenet"i+1 "de vecteur v2")
+    reade(v2[i]);
+    END_FOR
+    p=0;
+    FOR i FROM 0 TO 2 STEP 1  DO
+        p=p+v1[i]*v2[i]
+    RETURN p ;
+END
+
+
+
+
+PROCEDURE  dot_product (v1(3):FLOAT,
+    v2(3):FLOAT,p:FLOAT)
+VAR
+    
+    i:INTEGER;
+    p:FLOAT;
+    
+BEGIN
+    FOR i FROM 0 TO 2 STEP 1  DO
+        write("donner lélémenet"i+1 "de vecteur v1")
+    reade(v1[i]);
+    write("donner lélémenet"i+1 "de vecteur v2")
+    reade(v2[i]);
+    END_FOR
+    p=0;
+    FOR i FROM 0 TO 2 STEP 1  DO
+        p=p+v1[i]*v2[i]
+    END_FOR
+    write("le produit scalaire des vecteurs v1 et v2:"p)
+END
+ALGORITHM orthogonale-v
+VAR
+    p:FLOAT;
+    n:INTEGER;
+
+BEGIN
+    dot_product(n)
+    fundot_product(n)
+    IF (p==0) THEN
+        write(les vecteur sont orthogonaux)
+        
+        ELSE
+            write(les vecteur ne sont pas orthogonaux)
+        
+    END_IF
+END
